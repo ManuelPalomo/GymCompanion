@@ -15,12 +15,12 @@ public class ExerciseParserTest {
     @Before
     public void initParser() throws Exception {
         weightParser = new WeightParser();
-        exerciseParser = new ExerciseParser(weightParser.parseWeights("weights-default.txt"));
+        exerciseParser = new ExerciseParser(weightParser.parseWeights("files/weights-default.txt"));
     }
 
     @Test
     public void testParseWeights() throws Exception {
-        Exercises exercises = exerciseParser.parseExercises("exercises-default.txt");
+        Exercises exercises = exerciseParser.parseExercises("files/exercises-default.txt");
         assertEquals(5,exercises.getExercises().size());
         assertEquals("Squat",exercises.getExercises().get(0).getName());
         assertEquals("Deadlift",exercises.getExercises().get(4).getName());

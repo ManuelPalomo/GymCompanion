@@ -18,7 +18,7 @@ public class WeightParserTest {
 
     @Test
     public void testParseWeight() {
-        Weights weightsTest = parser.parseWeights("weights-default.txt");
+        Weights weightsTest = parser.parseWeights("files/weights-default.txt");
         assertEquals(5, weightsTest.getPlates().size());
         assertEquals(2, weightsTest.getBarbells().size());
         assertEquals(1.25, weightsTest.getPlates().get(0).getWeight(), 0);
