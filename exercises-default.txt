@@ -1,0 +1,6 @@
+//GymCompanion Default Weights
+Squat#Normal
+Bench Press#Normal
+Barbell Row#Normal
+Overhead Press#Olympic
+Deadlift#Normal

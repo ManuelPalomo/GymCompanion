@@ -50,7 +50,7 @@ public class WeightParser {
 
     private Barbell parseBarbell(String barbellLine) {
         String[] barbellString = barbellLine.split("#");
-        return new Barbell(Integer.parseInt(barbellString[1]), barbellString[0]);
+        return new Barbell(barbellString[0], Integer.parseInt(barbellString[1]));
     }
 
 }

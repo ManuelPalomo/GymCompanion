@@ -4,9 +4,10 @@ public class Barbell {
     private int weight;
     private String name;
 
-    public Barbell(int weight, String name) {
-        this.weight = weight;
+    public Barbell(String name, int weight) {
         this.name = name;
+        this.weight = weight;
+
     }
 
     public int getWeight() {

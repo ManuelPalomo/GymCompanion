@@ -18,4 +18,13 @@ public class Weights {
     public LinkedList<Plate> getPlates() {
         return plates;
     }
+
+    public Barbell getBarbellByName(String name) {
+        for (Barbell barbell : barbells) {
+            if (barbell.getName().equals(name)) {
+                return barbell;
+            }
+        }
+        return null;
+    }
 }
