@@ -9,6 +9,7 @@ import org.junit.runners.Suite;
         WeightParserTest.class,
         RoutineParserTest.class,
         WeightsBreakdownTest.class,
+        SessionWeightBreakdownTest.class,
 })
 public class TestSuite {
 }

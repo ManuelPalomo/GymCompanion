@@ -8,12 +8,16 @@ public class Routine {
     private String name;
     private LinkedList<Exercise> exercises;
 
-    public Routine(String name,LinkedList<Exercise>exercises) {
+    public Routine(String name, LinkedList<Exercise> exercises) {
         this.name = name;
         this.exercises = exercises;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
+    }
+
+    public LinkedList<Exercise> getExercises() {
+        return exercises;
     }
 }

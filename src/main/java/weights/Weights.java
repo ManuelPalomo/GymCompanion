@@ -1,7 +1,6 @@
 package main.java.weights;
 
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Weights {
