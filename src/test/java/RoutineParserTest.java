@@ -25,7 +25,7 @@ public class RoutineParserTest {
 
     @Test
     public void testParseRoutines() throws Exception {
-        Routines testRoutines = routineParser.parseRoutines("files/routine-default.txt");
+        Routines testRoutines = routineParser.parseRoutines("files/routines-default.txt");
         assertEquals(2,testRoutines.getRoutines().size());
         assertEquals("A",testRoutines.getRoutines().get(0).getName());
 

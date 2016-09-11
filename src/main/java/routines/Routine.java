@@ -20,4 +20,13 @@ public class Routine {
     public LinkedList<Exercise> getExercises() {
         return exercises;
     }
+
+    @Override
+    public String toString() {
+        String result = "Routine:" + name + " | Exercises: ";
+        for (Exercise exercise : exercises) {
+            result += exercise.getName() + "|";
+        }
+        return result;
+    }
 }
