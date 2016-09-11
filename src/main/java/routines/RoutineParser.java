@@ -5,6 +5,7 @@ import main.java.exercises.Exercises;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -17,7 +18,8 @@ public class RoutineParser {
 
     public Routines parseRoutines(String file) {
         try {
-            Scanner scanner = new Scanner(new File(file));
+            InputStream stream = ClassLoader.getSystemClassLoader().getResourceAsStream(file);
+            Scanner scanner = new Scanner(stream);
             LinkedList<Routine> routines = new LinkedList<>();
 
             while (scanner.hasNext()) {
@@ -26,10 +28,11 @@ public class RoutineParser {
                     routines.add(parseRoutine(line));
                 }
             }
+            stream.close();
             scanner.close();
             return new Routines(routines);
 
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;

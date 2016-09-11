@@ -1,0 +1,6 @@
+//GymCompanion Default Weights
+//Plates
+1.25|2.5|5|10|20
+//Bars
+Olympic#20
+Normal#10

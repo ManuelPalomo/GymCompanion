@@ -11,7 +11,7 @@ import main.java.weights.Weights;
 public class Main {
 
     public static void main(String[] args) {
-        Weights weights = new WeightParser().parseWeights("files/weights-default.txt");
+        Weights weights = new WeightParser().parseWeights("weights-default.txt");
         Exercises exercises = new ExerciseParser(weights).parseExercises("files/exercises-default.txt");
         Routines routines = new RoutineParser(exercises).parseRoutines("files/routines-default.txt");
         DefaultMenu menu = new DefaultMenu(routines, weights);

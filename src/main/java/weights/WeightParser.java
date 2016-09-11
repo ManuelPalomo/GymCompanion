@@ -2,6 +2,7 @@ package main.java.weights;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -17,7 +18,8 @@ public class WeightParser {
             LinkedList<Plate> plates = new LinkedList<>();
             LinkedList<Barbell> barbells = new LinkedList<>();
 
-            Scanner scanner = new Scanner(new File(file));
+            InputStream stream = ClassLoader.getSystemClassLoader().getResourceAsStream(file);
+            Scanner scanner = new Scanner(stream);
 
             while (scanner.hasNext()) {
                 String line = scanner.nextLine();
@@ -31,9 +33,10 @@ public class WeightParser {
                     }
                 }
             }
+            stream.close();
             scanner.close();
             return new Weights(barbells, plates);
-        } catch (FileNotFoundException e) {
+        } catch (Exception e){
             e.printStackTrace();
         }
         return null;

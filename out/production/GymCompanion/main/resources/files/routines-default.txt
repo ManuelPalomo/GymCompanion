@@ -1,0 +1,3 @@
+//GymCompanion Default Routines
+A#Squat#Bench Press#Barbell Row
+B#Squat#Overhead Press#Deadlift
